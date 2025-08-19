@@ -1,10 +1,7 @@
 package BR.example.test;
 
 import BR.example.BaseTest;
-import BR.example.page.loginPage;
-import BR.example.page.menuPage;
-import BR.example.page.orderPickupPage;
-import BR.example.page.timeSetupPage;
+import BR.example.page.*;
 import com.aventstack.extentreports.ExtentTest;
 import org.openqa.selenium.WebDriver;
 import org.slf4j.Logger;
@@ -19,7 +16,7 @@ public class applyCouponFlow extends BaseTest {
     private menuPage menuPage;
     private orderPickupPage orderPickupPage;
     private timeSetupPage TimeSetupPage;
-//    private applyCouponPage applyCouponPage;
+    private applyCouponPage applyCouponPage;
 //    private paymentPage paymentPage;
     private Logger log = LoggerFactory.getLogger(loginTest.class);
 
@@ -43,8 +40,8 @@ public class applyCouponFlow extends BaseTest {
         TimeSetupPage = new timeSetupPage(driver);
         TimeSetupPage.TimeSetupFlow();
 
-//        applyCouponPage = new applyCouponPage(driver);
-//        applyCouponPage.applyCouponFlow();
+        applyCouponPage = new applyCouponPage(driver);
+        applyCouponPage.applyCouponFlow();
 
 //        paymentPage = new paymentPage(driver);
 //        paymentPage.paymentFlow();

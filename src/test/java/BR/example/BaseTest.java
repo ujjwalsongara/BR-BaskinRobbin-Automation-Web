@@ -30,6 +30,11 @@ public class BaseTest {
     protected WebDriver driver;
     Logger log = LoggerFactory.getLogger(BaseTest.class);
 
+    public static void waitWebElement(WebElement element, WebDriver driver) {
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        wait.until(ExpectedConditions.elementToBeClickable(element));
+    }
+
     @BeforeSuite
     public void setUpSuite() {
         extent = ExtentReportManager.getReportInstance();
@@ -45,12 +50,6 @@ public class BaseTest {
         log.info("Test Started");
     }
 
-    @AfterSuite
-    public void afterSuite() {
-        log.info("Test case is End");
-        log.info("total execution " + (afterTime - beforeTime) + "ms");
-    }
-
 //    @AfterMethod
 //    public void tearDownMethod(ITestResult result) {
 //        if (result.getStatus() == ITestResult.FAILURE) {
@@ -60,6 +59,11 @@ public class BaseTest {
 //        }
 //    }
 
+    @AfterSuite
+    public void afterSuite() {
+        log.info("Test case is End");
+        log.info("total execution " + (afterTime - beforeTime) + "ms");
+    }
 
     @AfterMethod
     public void tearDownMethod(ITestResult result) {
@@ -98,11 +102,6 @@ public class BaseTest {
             log.error("Error during WebDriver cleanup: " + e.getMessage(), e);
             // Don't re-throw here unless you want to fail the entire build for cleanup errors
         }
-    }
-
-    public static void waitWebElement(WebElement element, WebDriver driver) {
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-        wait.until(ExpectedConditions.elementToBeClickable(element));
     }
 
     public WebDriver getWebDriver() {

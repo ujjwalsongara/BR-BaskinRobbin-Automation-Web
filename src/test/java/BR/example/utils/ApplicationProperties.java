@@ -17,9 +17,13 @@ public enum ApplicationProperties {
         }
     }
 
-    public String getBaseUrl() {return properties.getProperty("baseUrl");}
+    public String getBaseUrl() {
+        return properties.getProperty("baseUrl");
+    }
 
-    public String getUsername() {return properties.getProperty("username");}
+    public String getUsername() {
+        return properties.getProperty("username");
+    }
 
     public String getPassword() {
         return properties.getProperty("password");
