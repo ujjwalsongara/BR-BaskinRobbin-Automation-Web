@@ -1,0 +1,10 @@
+BR/example/utils/ExtentReportManager.class
+BR/example/page/loginPage.class
+BR/example/page/timeSetupPage.class
+BR/example/BaseTest.class
+BR/example/test/loginTest.class
+BR/example/utils/ApplicationProperties.class
+BR/example/page/orderPickupPage.class
+BR/example/test/applyCouponFlow.class
+BR/example/page/menuPage.class
+BR/example/page/BasePage.class

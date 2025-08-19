@@ -13,8 +13,6 @@ import org.testng.annotations.Optional;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
-import static BR.example.BaseTest.extent;
-
 public class applyCouponFlow extends BaseTest {
 
     private loginPage loginPage;

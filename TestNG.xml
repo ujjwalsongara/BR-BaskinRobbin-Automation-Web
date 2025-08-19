@@ -1,3 +1,11 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
-<properties/>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Arbys Web Automation Suite">
+    <listeners>
+        <!--        <listener class-name="Arbys.web.automation.utils.ExtentReportManager"/>-->
+    </listeners>
+    <test name="Login Functionality Test">
+        <classes>
+            <class name="BR.example.test.loginTest"/>
+        </classes>
+    </test>
+</suite>
