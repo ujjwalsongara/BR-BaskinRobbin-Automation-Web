@@ -18,7 +18,7 @@ public class timeSetupPage extends BasePage {
     private WebElement confirmBtn;
 
     @FindBy(xpath = "//*[@id=\"modf_15759\"]/div/img")
-    private WebElement CrunchItem;
+    private WebElement crunchItem;
 
     @FindBy(id = "btnCart")
     private WebElement addToCart;
@@ -71,10 +71,9 @@ public class timeSetupPage extends BasePage {
             confirmBtn.click();
             test.pass("Clicked on Confirm");
 
-            waitWebElement(CrunchItem, driver);
-            CrunchItem.click();
+            waitWebElement(crunchItem, driver);
+            crunchItem.click();
             test.pass("Clicked on Crunch");
-
 
             test = extent.createTest("Confirm Order Flow").assignCategory("Regression");
 

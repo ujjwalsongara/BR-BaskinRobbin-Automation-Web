@@ -11,8 +11,9 @@ public class orderPickupPage extends BasePage {
 //    private WebElement pickupBtn;
 
     @FindBy(xpath = "//*[@id=\"divcustomize\"]/div[2]/div/img")
-    private WebElement order;
+    private WebElement CupsOrder;
 
+    //    @FindBy(xpath = "//*[@id=\"divcustomize\"]/div[8]/div/div/div[3]/a")
     @FindBy(xpath = "//*[@id=\"divcustomize\"]/div[1]/div/div/div[3]/a")
     private WebElement item;
 
@@ -47,13 +48,13 @@ public class orderPickupPage extends BasePage {
 //            pickupBtn.click();
 //            test.pass("clicked on pickUp");
 
-            waitWebElement(order, driver);
-            order.click();
-            test.pass("clicked on Crispy Juicy Chicken");
+            waitWebElement(CupsOrder, driver);
+            CupsOrder.click();
+            test.pass("clicked on Cups");
 
             waitWebElement(item, driver);
             item.click();
-            test.pass("clicked on Chicken Bacon Swiss");
+            test.pass("clicked on One Scoops Cup");
 
             waitWebElement(pickUpBtnn, driver);
             pickUpBtnn.click();
