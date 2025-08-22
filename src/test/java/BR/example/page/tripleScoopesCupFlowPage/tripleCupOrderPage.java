@@ -32,12 +32,12 @@ public class tripleCupOrderPage extends BasePage {
 
             Thread.sleep(4000);
 
-            JavascriptExecutor scroll = (JavascriptExecutor) driver;
-            scroll.executeScript("window.scrollBy(0,700)");
+//            JavascriptExecutor scroll = (JavascriptExecutor) driver;
+//            scroll.executeScript("window.scrollBy(0,700)");
 
-//            WebElement item = driver.findElement(By.xpath("//*[@id=\"modf_5576\"]/div/img")); // element inside side screen
-//            JavascriptExecutor js = (JavascriptExecutor) driver;
-//            js.executeScript("arguments[0].scrollIntoView(true);", item);
+            WebElement item = driver.findElement(By.xpath("//*[@id=\"modf_5576\"]/div/img")); // element inside side screen
+            JavascriptExecutor js = (JavascriptExecutor) driver;
+            js.executeScript("arguments[0].scrollIntoView(true);", item);
 
             Thread.sleep(2000);
 
