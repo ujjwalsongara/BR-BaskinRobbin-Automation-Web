@@ -20,9 +20,6 @@ public class timeSetupPage extends BasePage {
     @FindBy(xpath = "//*[@id=\"modf_15759\"]/div/img")
     private WebElement crunchItem;
 
-//    @FindBy(xpath = "//*[@id=\"modf_5576\"]/div/div[3]/span/i")
-//    private WebElement plusIcon;
-
     @FindBy(id = "btnCart")
     private WebElement addToCart;
 
@@ -77,21 +74,6 @@ public class timeSetupPage extends BasePage {
             waitWebElement(crunchItem, driver);
             crunchItem.click();
             test.pass("Clicked on Crunch");
-
-//            Thread.sleep(4000);
-//            JavascriptExecutor scroll = (JavascriptExecutor) driver;
-//            scroll.executeScript("window.scrollBy(0,700)");
-//
-//            Thread.sleep(2000);
-//
-//            waitWebElement(plusIcon, driver);
-//            plusIcon.click();
-//            Thread.sleep(2000);
-//            plusIcon.click();
-//            Thread.sleep(2000);
-//            plusIcon.click();
-//            test.pass("Clicked on Add Triple Cup");
-
 
             test = extent.createTest("Confirm Order Flow").assignCategory("Regression");
 

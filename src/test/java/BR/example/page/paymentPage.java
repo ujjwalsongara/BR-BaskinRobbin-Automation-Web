@@ -28,7 +28,6 @@ public class paymentPage extends BasePage {
             WebElement OnlinePayment = elementPayment.size() > 0 ? elementPayment.get(0) : null;
             JavascriptExecutor payment = (JavascriptExecutor) driver;
             payment.executeScript("arguments[0].click();", OnlinePayment);
-
             test.pass("Clicked on Payment method");
 
             Thread.sleep(3000);

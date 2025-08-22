@@ -26,6 +26,7 @@ public class tripleCupOrderPage extends BasePage {
     public tripleCupOrderPage(WebDriver driver) {
         super(driver);
     }
+
     public void tripleCupOrderFlow() throws InterruptedException {
         try {
             test = extent.createTest("Add triple Scoop Cup Flow").assignCategory("Regression");
@@ -84,9 +85,6 @@ public class tripleCupOrderPage extends BasePage {
             JavascriptExecutor jsss = (JavascriptExecutor) driver;
             jsss.executeScript("window.scrollBy(0, 9000)");
 
-//            waitWebElement(checkout, driver);
-//            checkout.click();
-
             Thread.sleep(2000);
 
             List<WebElement> checkout = driver.findElements(By.xpath("//a[@class='checkoutLinkTag btn btn-primary btn-lg mb-2 mt-2']"));
@@ -99,7 +97,7 @@ public class tripleCupOrderPage extends BasePage {
 
             Thread.sleep(30000);
 
-        }catch (Exception e) {
+        } catch (Exception e) {
             test.fail("Login failed: " + e.getMessage());
             throw e;
         }

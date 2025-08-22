@@ -1,6 +1,5 @@
 package BR.example.page;
 
-import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -14,7 +13,7 @@ public class orderPickupPage extends BasePage {
     @FindBy(xpath = "//*[@id=\"divcustomize\"]/div[2]/div/img")
     private WebElement CupsOrder;
 
-//    @FindBy(xpath = "//*[@id=\"divcustomize\"]/div[8]/div/div/div[3]/a")
+    //    @FindBy(xpath = "//*[@id=\"divcustomize\"]/div[8]/div/div/div[3]/a")
     @FindBy(xpath = "//*[@id=\"divcustomize\"]/div[1]/div/div/div[3]/a")
     private WebElement item;
 
@@ -53,16 +52,9 @@ public class orderPickupPage extends BasePage {
             CupsOrder.click();
             test.pass("clicked on Cups");
 
-//            Thread.sleep(4000);
-//            JavascriptExecutor js = (JavascriptExecutor) driver;
-//            js.executeScript("window.scrollBy(0,1000)");
-//
-//            Thread.sleep(2000);
-
             waitWebElement(item, driver);
             item.click();
             test.pass("clicked on One Scoops Cup");
-//            test.pass("clicked on Triple Value Scoops Cup");
 
             waitWebElement(pickUpBtnn, driver);
             pickUpBtnn.click();
