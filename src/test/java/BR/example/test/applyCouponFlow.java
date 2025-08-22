@@ -48,4 +48,3 @@ public class applyCouponFlow extends BaseTest {
 
     }
 }
-

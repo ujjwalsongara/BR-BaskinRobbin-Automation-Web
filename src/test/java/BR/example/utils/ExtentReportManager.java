@@ -13,7 +13,7 @@ public class ExtentReportManager {
     public static ExtentReports getReportInstance() {
 
         if (extent == null) {
-            ExtentSparkReporter reporter = new ExtentSparkReporter("test-reports/ApplyCouponFlow.html");
+            ExtentSparkReporter reporter = new ExtentSparkReporter("test-reports/TripleValueScoopsCupFlow.html");
             reporter.config().setReportName("BaskinRobbin Web Automation Report");
             reporter.config().setDocumentTitle("Test Results");
             reporter.config().setTheme(Theme.STANDARD);
